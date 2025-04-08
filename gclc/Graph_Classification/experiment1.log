@@ -1,0 +1,30 @@
+
+Epoch 0 - 2025-03-13 14:50:33
+[Classification] Loss: 3.1034, Acc: 4.49%
+[Instance Embed] NMI: 0.6624, ARI: 0.4117, Acc: 0.5543
+[Cluster Embed]  NMI: 0.4244, ARI: 0.1871, Acc: 0.3197
+
+Epoch 1 - 2025-03-13 15:15:31
+[Classification] Loss: 3.1062, Acc: 4.49%
+[Instance Embed] NMI: 0.5705, ARI: 0.2011, Acc: 0.4119
+[Cluster Embed]  NMI: 0.4296, ARI: 0.1982, Acc: 0.3143
+
+Epoch 2 - 2025-03-13 15:23:08
+[Classification] Loss: 3.1009, Acc: 4.49%
+[Instance Embed] NMI: 0.6135, ARI: 0.2534, Acc: 0.4375
+[Cluster Embed]  NMI: 0.4376, ARI: 0.1960, Acc: 0.3361
+
+Epoch 3 - 2025-03-13 15:27:44
+[Classification] Loss: 3.0985, Acc: 4.54%
+[Instance Embed] NMI: 0.5711, ARI: 0.2039, Acc: 0.3940
+[Cluster Embed]  NMI: 0.4365, ARI: 0.1952, Acc: 0.3298
+
+Epoch 4 - 2025-03-13 15:41:29
+[Classification] Loss: 3.0969, Acc: 4.54%
+[Instance Embed] NMI: 0.5667, ARI: 0.2196, Acc: 0.3399
+[Cluster Embed]  NMI: 0.4355, ARI: 0.1974, Acc: 0.3337
+
+Epoch 5 - 2025-03-13 15:45:54
+[Classification] Loss: 3.0931, Acc: 4.54%
+[Instance Embed] NMI: 0.6019, ARI: 0.2843, Acc: 0.4268
+[Cluster Embed]  NMI: 0.4325, ARI: 0.1868, Acc: 0.3327
