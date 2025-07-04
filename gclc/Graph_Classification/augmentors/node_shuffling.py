@@ -1,5 +1,5 @@
-from GCL.augmentors.augmentor import Graph, Augmentor
-from GCL.augmentors.functional import permute
+from .augmentor import Graph, Augmentor
+from .functional import permute
 
 
 class NodeShuffling(Augmentor):

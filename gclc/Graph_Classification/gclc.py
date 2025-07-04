@@ -19,7 +19,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 import torch.optim.lr_scheduler as lr_scheduler
 import argparse
-import augmentors as A
+# import augmentors as A  # Temporarily disabled due to PyTorch Geometric dependencies
 import heapq as hp
 import pickle
 import time
@@ -46,9 +46,10 @@ from models import Encoder
 from losses import SupConLoss
 from losses import ClusterLoss
 from losses import ImprovedClusterLoss
+from novelty_detection_system import NoveltyDetectionSystem
 from sklearn import preprocessing
 #from IPython.core.debugger import Tracer
-from torch_geometric.utils import precision, recall, f1_score,true_positive, true_negative, false_positive, false_negative
+#from torch_geometric.utils import precision, recall, f1_score,true_positive, true_negative, false_positive, false_negative
 from tqdm import tqdm
 from graphaug import GraphAugmentor
 import logging
@@ -1003,6 +1004,29 @@ def main():
         
         acc_folds.append(max_acc)
     
+    # ================ 新增: 新类检测系统演示 ================ #
+    print("\n" + "="*60)
+    print("演示 NoveltyDetectionSystem 新类检测功能")
+    print("="*60)
+    
+    try:
+        # 这里添加新类检测的演示代码
+        # 注意: 在实际使用中，您需要有真实的嵌入数据和标签
+        print("NoveltyDetectionSystem 已成功导入并可以使用")
+        print("使用方法:")
+        print("1. from novelty_detection_system import NoveltyDetectionSystem")
+        print("2. nds = NoveltyDetectionSystem()")
+        print("3. nds.fit(known_embeddings, known_labels)")
+        print("4. is_novel, distances = nds.predict_novelty(test_embeddings)")
+        print("5. clustering_results = nds.cluster_novel_samples(novel_embeddings)")
+        print("\n详细使用示例请参考 test_novelty_detection.py")
+        
+    except Exception as e:
+        print(f"NoveltyDetectionSystem 演示出错: {e}")
+    
+    print("="*60)
+    # ================ 新类检测系统演示结束 ================ #
+
     print("Accuracies for each fold:", acc_folds)
     # 以下代码可用于计算交叉验证的平均准确率和标准差
     # mean_validation = accuracy_arr.mean(axis=0)

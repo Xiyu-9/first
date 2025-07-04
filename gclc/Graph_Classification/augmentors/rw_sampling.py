@@ -1,5 +1,5 @@
-from GCL.augmentors.augmentor import Graph, Augmentor
-from GCL.augmentors.functional import random_walk_subgraph
+from .augmentor import Graph, Augmentor
+from .functional import random_walk_subgraph
 
 
 class RWSampling(Augmentor):

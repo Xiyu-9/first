@@ -1,5 +1,5 @@
-from GCL.augmentors.augmentor import Graph, Augmentor
-from GCL.augmentors.functional import drop_node
+from .augmentor import Graph, Augmentor
+from .functional import drop_node
 
 
 class NodeDropping(Augmentor):

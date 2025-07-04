@@ -3,7 +3,18 @@ import networkx as nx
 import torch.nn.functional as F
 
 from typing import Optional
-from GCL.utils import normalize
+# from GCL.utils import normalize
+
+def normalize(x):
+    """Simple normalization function"""
+    if x.dim() == 1:
+        norm = x.norm(p=2, dim=0, keepdim=True)
+        norm = norm.clamp(min=1e-12)
+        return x / norm
+    else:
+        norm = x.norm(p=2, dim=1, keepdim=True)
+        norm = norm.clamp(min=1e-12)
+        return x / norm
 from torch_sparse import SparseTensor, coalesce
 from torch_scatter import scatter
 from torch_geometric.transforms import GDC
