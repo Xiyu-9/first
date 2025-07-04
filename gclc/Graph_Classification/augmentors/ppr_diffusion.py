@@ -1,5 +1,5 @@
-from GCL.augmentors.augmentor import Graph, Augmentor
-from GCL.augmentors.functional import compute_ppr
+from .augmentor import Graph, Augmentor
+from .functional import compute_ppr
 
 
 class PPRDiffusion(Augmentor):
